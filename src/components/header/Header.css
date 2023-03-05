@@ -1,0 +1,34 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    margin-right: 97px;
+}
+
+li {
+    float: left
+}
+
+li a{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.nav__logo{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar{
+    margin-top: 12px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+}
