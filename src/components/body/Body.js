@@ -4,14 +4,13 @@ import './Body.css'
 import { Navigation, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { BsChevronRight } from "react-icons/bs";
+import { BsChevronLeft } from "react-icons/bs";
+
 
 function Body() {
 
   const [ models, setModels ] = React.useState([])
-
-  let testAray = ['test01', 'test02']
-  let test;
-
 
   React.useEffect(() => {
     async function fetchData() {
@@ -22,21 +21,23 @@ function Body() {
   }, [])
 
   return (
+
       <div className="slider__container">
         <Swiper
         style={{marginTop: 30}}
-      modules={[Navigation, Autoplay]}
-      spaceBetween={0}
-      slidesPerView={1}
-      centeredSlides={true}
-      navigation={true}
-      autoplay={{
-        delay: 250000,
-        disableOnInteraction: false
-      }}
-      loop={true}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
+        modules={[Navigation, Autoplay]}
+        spaceBetween={0}
+        slidesPerView={1}
+        centeredSlides={true}
+        navigation={{
+          nextEl: ".next__button",
+          prevEl: ".previous__button"
+        }}
+        autoplay={{
+          delay: 250000,
+          disableOnInteraction: false
+       }}
+        loop={true}
     >
       {models.map((item) => {
         return (
@@ -44,7 +45,10 @@ function Body() {
         )
         })}
     </Swiper>
-      </div>
+    <BsChevronLeft className='previous__button'></BsChevronLeft>
+    <BsChevronRight className='next__button'></BsChevronRight>
+    </div>
+    
   )
 
 
@@ -53,11 +57,4 @@ function Body() {
 
 
 export default Body
-
-// {models.map((item) => {
-//   <>
-//     <SwiperSlide>{item.name}</SwiperSlide>
-    
-//   </>
-// })}
 

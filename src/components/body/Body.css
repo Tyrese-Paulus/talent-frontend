@@ -7,6 +7,33 @@
 }
 
 .slider__container{
-
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.next__button{
+    line-height: 0;
+    cursor: pointer;
+    height: 40px;
+    right: 150px;
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    z-index: 100;
+    opacity: 1;
+    font-size: 40px;
+}
+
+.previous__button{
+    line-height: 0;
+    cursor: pointer;
+    height: 40px;
+    left: 150px;
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    z-index: 100;
+    opacity: 1;
+    font-size: 40px;
+}
