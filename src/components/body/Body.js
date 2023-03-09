@@ -1,12 +1,17 @@
 import React from 'react'
-import Slider from 'react-animated-slider';
-import 'react-animated-slider/build/horizontal.css';
 import axios from '../../axios'
-
+import './Body.css'
+import { Navigation, Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 function Body() {
 
   const [ models, setModels ] = React.useState([])
+
+  let testAray = ['test01', 'test02']
+  let test;
+
 
   React.useEffect(() => {
     async function fetchData() {
@@ -16,25 +21,43 @@ function Body() {
       fetchData()
   }, [])
 
-  console.log(models);
-
   return (
-    <>
-      <Slider autoplay={3000}>
-          {models.map((item, index) => (
-          <div
-            key={index}
-            style={{ background: `url('${item.image}') no-repeat center center` }}
-          >
-            <div className="center">
-              <h1>{item.name}</h1>
-            </div>
-          </div>
-        ))}
-      </Slider>
-    </>
+      <div className="slider__container">
+        <Swiper
+        style={{marginTop: 30}}
+      modules={[Navigation, Autoplay]}
+      spaceBetween={0}
+      slidesPerView={1}
+      centeredSlides={true}
+      navigation={true}
+      autoplay={{
+        delay: 250000,
+        disableOnInteraction: false
+      }}
+      loop={true}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+    >
+      {models.map((item) => {
+        return (
+            <SwiperSlide><img className='slider__image' src={item.image} alt="" /></SwiperSlide>
+        )
+        })}
+    </Swiper>
+      </div>
   )
+
+
 }
 
+
+
 export default Body
+
+// {models.map((item) => {
+//   <>
+//     <SwiperSlide>{item.name}</SwiperSlide>
+    
+//   </>
+// })}
 
