@@ -34,7 +34,7 @@ function Body() {
           prevEl: ".previous__button"
         }}
         autoplay={{
-          delay: 250000,
+          delay: 3000,
           disableOnInteraction: false
        }}
         loop={true}
