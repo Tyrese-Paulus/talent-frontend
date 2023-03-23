@@ -1,0 +1,34 @@
+.talent__grid{
+    width: 100%;
+}
+
+.talent__list{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.talent{
+    width: 297px;
+    height: 397px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 40px;
+    margin-top: 15px;
+}
+
+.talent__image{
+    width: 100%;
+    height: 100%;
+}
+
+.talent__name{
+    position: relative;
+    left: 41%;
+    color: rgb(100, 102, 107);
+    font-size: 15px;
+    letter-spacing: 0em;
+}

@@ -3,6 +3,7 @@ import './Header.css'
 import { AiFillInstagram } from "react-icons/ai"
 import { AiFillTwitterSquare } from "react-icons/ai"
 import { AiFillFacebook } from "react-icons/ai"
+import { Outlet, Link } from "react-router-dom"
 
 function header() {
   return (
@@ -22,7 +23,7 @@ function header() {
                       MEN
                     </div>
                     <ul>
-                      <li><a href="">MAINBOARD</a></li>
+                      <li><Link to={`talents`}>MAINBOARD</Link></li>
                       <li><a href="">NEW FACES</a></li>
                       <li><a href="">COMMERCIAL</a></li>
                     </ul>
