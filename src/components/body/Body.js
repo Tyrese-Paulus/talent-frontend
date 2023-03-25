@@ -41,7 +41,7 @@ function Body() {
     >
       {models.map((item) => {
         return (
-            <SwiperSlide><img className='slider__image' src={item.image} alt="" /></SwiperSlide>
+            <SwiperSlide key={item.id}><img className='slider__image' src={item.image} alt="" /></SwiperSlide>
         )
         })}
     </Swiper>

@@ -6,6 +6,7 @@ import Header from './components/header/Header'
 import Body from './components/body/Body'
 import TalentGrid from './components/talentGrid/TalentGrid'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import  TalentPage  from './components/talentPage/TalentPage'
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,11 @@ const router = createBrowserRouter([
       {
         path: "/talents",
         element: <TalentGrid />
-      }
+      },
+      {
+        path: "/talent/:id",
+        element: <TalentPage />
+      },
     ]
   }
 ])

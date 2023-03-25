@@ -5,10 +5,11 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 
 function App() {
+  const [ talentId, setTalentId ] = React.useState('')
   return (
     <>
       <Header />
-      <Outlet />
+      <Outlet context={[talentId, setTalentId]}/>
     </>
 
   );

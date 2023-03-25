@@ -3,23 +3,24 @@ import './Header.css'
 import { AiFillInstagram } from "react-icons/ai"
 import { AiFillTwitterSquare } from "react-icons/ai"
 import { AiFillFacebook } from "react-icons/ai"
-import { Outlet, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function header() {
   return (
+    <Link to={`/`}>
     <header className="navbar">
         <div className="nav__logo">
           <img src="https://www.syncmodels.com/assets/images/205/205-logo.svg" alt="" />
         </div>
 
-        <ul class="nested-dropdowns">    
+        <ul className="nested-dropdowns">    
             <li>
-              <div class="nested-dropdowns__item">
+              <div className="nested-dropdowns__item">
                   JOHANNESBURG
               </div>
                 <ul>
                   <li>
-                    <div class="nested-dropdowns__item">
+                    <div className="nested-dropdowns__item">
                       MEN
                     </div>
                     <ul>
@@ -30,7 +31,7 @@ function header() {
                   </li>
 
                   <li>
-                    <div class="nested-dropdowns__item">
+                    <div className="nested-dropdowns__item">
                       WOMAN
                     </div>
                     <ul>
@@ -41,7 +42,7 @@ function header() {
                   </li>
 
                   <li>
-                    <div class="nested-dropdowns__item">
+                    <div className="nested-dropdowns__item">
                       INFLUENCERS
                     </div>
                     <ul>
@@ -54,12 +55,12 @@ function header() {
             </li>
 
             <li>
-              <div class="nested-dropdowns__item">
+              <div className="nested-dropdowns__item">
                   CAPE TOWN
               </div>
                 <ul>
                   <li>
-                    <div class="nested-dropdowns__item">
+                    <div className="nested-dropdowns__item">
                       MEN
                     </div>
                     <ul>
@@ -70,7 +71,7 @@ function header() {
                   </li>
 
                   <li>
-                    <div class="nested-dropdowns__item">
+                    <div className="nested-dropdowns__item">
                       WOMAN
                     </div>
                     <ul>
@@ -81,7 +82,7 @@ function header() {
                   </li>
 
                   <li>
-                    <div class="nested-dropdowns__item">
+                    <div className="nested-dropdowns__item">
                       INFLUENCERS
                     </div>
                     <ul>
@@ -96,12 +97,12 @@ function header() {
             <li className="dropdowns">SYNCED PRIME</li>
 
             <li>
-              <div class="nested-dropdowns__item">
+              <div className="nested-dropdowns__item">
                   INTERNATIONAL
               </div>
                 <ul>
                   <li>
-                    <div class="nested-dropdowns__item">
+                    <div className="nested-dropdowns__item">
                       MEN
                     </div>
                     <ul>
@@ -112,7 +113,7 @@ function header() {
                   </li>
 
                   <li>
-                    <div class="nested-dropdowns__item">
+                    <div className="nested-dropdowns__item">
                       WOMAN
                     </div>
                     <ul>
@@ -123,7 +124,7 @@ function header() {
                   </li>
 
                   <li>
-                    <div class="nested-dropdowns__item">
+                    <div className="nested-dropdowns__item">
                       INFLUENCERS
                     </div>
                     <ul>
@@ -146,6 +147,7 @@ function header() {
         </ul>
 
     </header>
+    </Link>
   )
 }
 
