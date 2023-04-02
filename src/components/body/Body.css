@@ -1,4 +1,11 @@
-.slider__image{
+.slider{
+    padding-top: 1px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider img{
     height: 700px;
     display: flex;
     justify-self: center;
@@ -6,14 +13,8 @@
     margin-right: auto;
 }
 
-.slider__container{
-    padding-top: 1px;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.next__button{
+.slider__right{
     line-height: 0;
     cursor: pointer;
     height: 40px;
@@ -26,7 +27,7 @@
     font-size: 40px;
 }
 
-.previous__button{
+.slider__left{
     line-height: 0;
     cursor: pointer;
     height: 40px;

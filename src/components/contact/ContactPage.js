@@ -1,15 +1,18 @@
 import React from 'react'
+
 import './ContactPage.css'
 
 function ContactPage() {
+
   return (
 
-    <div className="contact__page">
+    <section className="contact">
 
-      <span className="contact__title">contact</span>
+      <span>contact</span>
 
-      <div className="contact__section1">
-        <div className="contact__section1__left">
+      <section>
+
+        <p>
           Demo model management
           <br />
           110th 3rd Avenue,Randburg 
@@ -17,8 +20,9 @@ function ContactPage() {
           Johannesburg, 4212 
           <br />
           By Appointment only
-        </div>
-        <div className="contact__section1__right">
+        </p>
+
+        <p>
           Monday through Friday, 9 am to 5 pm, and on Saturday, 10 am to 3 pm.
           <br />
           For general inquiries, to book one of our models, or to join us, you can contact us by phone or email. 
@@ -28,25 +32,22 @@ function ContactPage() {
           Join us as a Model or follow up on a submitted application, please email: scout@demo.com
           <br />
           To book a model please send all briefs or castings to: Info@demo.com
-        </div>
-      </div>
+        </p>
 
-      <div className="contact__section2">
+      </section>
 
-        <div className="contact__section2__left">
+      <section>
+
+        <div>
           DIRECTOR
           <br />
           Chris Bernard
           <br />
           Director@demo.com
           <br />
-          <br />
-          <br />
-          For any account enquiries
-          Accounts@demo.com
         </div>
 
-        <div className="contact__section2__center">
+        <div>
           HEADBOOKER - Johannesburg
           <br />
           Thomas Nguanu
@@ -55,7 +56,8 @@ function ContactPage() {
           <br />
           By Appointment only
         </div>
-        <div className="contact__section2__right">
+
+        <div>
           Demo model management
           <br />
           110th 3rd Avenue,Randburg 
@@ -64,9 +66,10 @@ function ContactPage() {
           <br />
           By Appointment only
         </div>
-      </div>
 
-    </div>
+      </section>
+
+    </section>
     
   )
 }

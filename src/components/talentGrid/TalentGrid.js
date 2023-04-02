@@ -1,6 +1,8 @@
 import React from 'react'
-import './TalentGrid.css'
 import axios from '../../axios'
+
+import './TalentGrid.css'
+
 import { useOutletContext } from "react-router-dom";
 import { Link } from "react-router-dom"
 import { useParams } from "react-router-dom";
@@ -13,30 +15,34 @@ function TalentGrid() {
 
 
   React.useEffect(() => {
+
     async function fetchData() {
-      const request = await axios.get(`talents/${routeParams.location}/${routeParams.gender}/${routeParams.organisation}`);
+      const request = await axios.get(`talents`);
       setModels(request.data);
       console.log(models);
       }
       fetchData()
+      
   })
 
   return (
-    <div className="talent__grid">
-      <div className="talent__list">
+    <section className="talentGrid">
+      <div>
         {models.map((item) => {
           return(
             <Link key={item.id} to={`../talent/${item.id}`}>
-              <div className="talent">
-                <img className="talent__image" src={item.image} alt="" />
-                <span className="talent__name">{item.name}</span>
-              </div>
+              <article>
+                <img src={item.image} alt="" />
+                <span>{item.name}</span>
+              </article>
             </Link>
           )
         })}
       </div>
-    </div>
+    </section>
   )
 }
 
 export default TalentGrid
+
+// const request = await axios.get(`talents/${routeParams.location}/${routeParams.gender}/${routeParams.organisation}`);

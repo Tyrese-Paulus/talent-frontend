@@ -1,4 +1,4 @@
-.contact__page{
+.contact{
     width: 75%;
     margin-left: auto;
     margin-right: auto;
@@ -6,43 +6,22 @@
     text-align: center;
 }
 
-.contact__title{
+.contact span{
     font-size: 27px;
 }
 
-.contact__section1{
+.contact section{
     display: flex;
     flex-direction: row;
     margin-top: 25px;
 }
 
-.contact__section1__left{
+.contact p{
     flex: 0.5;
     text-align: center;
 }
 
-.contact__section1__right{
-    flex: 0.5;
-    text-align: center;
-}
-
-.contact__section2{
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-}
-
-.contact__section2__left{
-    flex: 0.33;
-    text-align: center;
-}
-
-.contact__section2__center{
-    flex: 0.33;
-    text-align: center;
-}
-
-.contact__section2__right{
+.contact div{
     flex: 0.33;
     text-align: center;
 }

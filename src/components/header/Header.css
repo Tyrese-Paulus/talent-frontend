@@ -1,77 +1,50 @@
-.nav__logo{
-    display: flex;
-    justify-content: center;
-    margin-top: 16px;
-}
-
-.nav__image{
-  height: 100px;
-  width: 250px;
-}
-
 .navbar{
     margin-top: 12px;
 }
 
+.navbar img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  width: 250px;
+}
+
 .nested-dropdowns {
-  /* Border */
   display: flex;
-
   justify-content: center;
-
-  /* Reset list styles */
   list-style-type: none;
   padding: 0;
-
   font-size: 17px;
   margin-top: 14px;
 }
 
 .nested-dropdowns li {
   cursor: pointer;
-
-  /* Spacing */
   padding: 0.25rem;
-
-  /* Used to position the sub nested-dropdowns */
   position: relative;
-
   background-color: white;
   z-index: 3;
 }
 
-/* The sub nested-dropdowns */
 .nested-dropdowns ul {
-
-  /* Hidden by default */
   display: none;
-
-  /* Absolute position */
   left: 0;
   position: absolute;
   top: 100%;
-
-  /* Reset styles */
   list-style-type: none;
   margin: 0;
   padding: 0;
-
   z-index: 3;
 }
 
-/* The second level sub nested-dropdowns */
+
 .nested-dropdowns ul ul {
   left: 100%;
   position: absolute;
   top: 0;
 }
 
-/* Change background color of list item when being hovered */
-.nested-dropdowns li:hover {
-  
-}
-
-/* Show the direct sub nested-dropdowns when hovering the list item */
 .nested-dropdowns li:hover > ul {
   display: block;
 }
@@ -81,7 +54,7 @@ a {
   color: inherit;
 }
 
-.nested-dropdowns__item{
+.nested-dropdowns span{
   margin-left: 13px;
   margin-right: 13px;
 }

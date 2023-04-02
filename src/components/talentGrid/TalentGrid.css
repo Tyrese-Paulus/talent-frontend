@@ -1,8 +1,8 @@
-.talent__grid{
+.talentGrid{
     width: 100%;
 }
 
-.talent__list{
+.talentGrid div{
     width: 75%;
     margin-left: auto;
     margin-right: auto;
@@ -11,7 +11,7 @@
     justify-content: center;
 }
 
-.talent{
+.talentGrid article{
     width: 297px;
     height: 397px;
     margin-left: 5px;
@@ -20,12 +20,12 @@
     margin-top: 15px;
 }
 
-.talent__image{
+.talentGrid img{
     width: 100%;
     height: 100%;
 }
 
-.talent__name{
+.talentGrid span{
     position: relative;
     left: 41%;
     color: rgb(100, 102, 107);

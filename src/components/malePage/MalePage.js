@@ -1,68 +1,75 @@
 import React from 'react'
+
 import "./MalePage.css"
+
 import { BsChevronLeft } from "react-icons/bs";
-import {   useNavigate,useOutletContext } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
 
 
 function MalePage({model}) {
+
     const navigate = useNavigate()
 
   return (
-    <div className="container">
-        <div className="top__bar">
 
-        <button className="back__button" onClick={() => navigate(-1)}>
-        <BsChevronLeft className='back__pointer'></BsChevronLeft>
-        <span className="back">BACK</span>
-        </button>
+    <section className="container">
+
+        <article>
+          <button onClick={() => navigate(-1)}>
+          <BsChevronLeft></BsChevronLeft>
+          <span>BACK</span>
+          </button>
+        </article>
+
+
+        <section key={model.id} className="slide">
+
+        <section>
+        <div>
+
+            <h2>{model.name}</h2>
+
+            <p>
+            <span>Height </span>
+            <span> {model.height} CM</span>
+            </p>
+
+            <p>
+            <span>Waist </span>
+            <span> {model.waist} CM</span>
+            </p>
+
+            <p>
+            <span>Chest </span>
+            <span> {model.chest} CM</span>
+            </p>
+
+            <p>
+            <span>Shoe </span>
+            <span> {model.shoe} UK</span>
+            </p>
+
+            <p>
+            <span>Hair </span>
+            <span> {model.hair}</span>
+            </p>
+
+            <p>
+            <span>Eyes </span>
+            <span> {model.eyes}</span>
+            </p>
 
         </div>
+        </section>
 
+        <section>
+          <img src={model.image} alt=""/>
+        </section>
 
-        <div key={model.id} className="swiper__slide">
-        <div className="model__summary">
-        <div className="model__info">
+        </section>
 
-            <span className="model__name">{model.name}</span>
-            
-            <span className="model__details">
-            <span className="stat__label">Height </span>
-            <span className="stat__value"> {model.height} CM</span>
-            <br />
-            </span>
-
-            <span className="model__details">
-            <span className="stat__label">Waist </span>
-            <span className="stat__value"> {model.waist} CM</span>
-            </span>
-
-            <span className="model__details">
-            <span className="stat__label">Chest </span>
-            <span className="stat__value"> {model.chest} CM</span>
-            </span>
-
-            <span className="model__details">
-            <span className="stat__label">Shoe </span>
-            <span className="stat__value"> {model.shoe} UK</span>
-            </span>
-
-            <span className="model__details">
-            <span className="stat__label">Hair </span>
-            <span className="stat__value"> {model.hair}</span>
-            </span>
-
-            <span className="model__details">
-            <span className="stat__label">Eyes </span>
-            <span className="stat__value"> {model.eyes}</span>
-            </span>
-
-        </div>
-        </div>
-        <div className="model__cover">
-        <img src={model.image} alt="" className="model__image"/>
-        </div>
-        </div>
-    </div>
+    </section>
   )
 }
 

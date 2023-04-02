@@ -7,10 +7,10 @@ import { Outlet } from 'react-router-dom';
 function App() {
   const [ talentId, setTalentId ] = React.useState('')
   return (
-    <>
+    <main>
       <Header />
       <Outlet context={[talentId, setTalentId]}/>
-    </>
+    </main>
 
   );
 }

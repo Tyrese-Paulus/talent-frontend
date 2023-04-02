@@ -1,9 +1,12 @@
 import React from 'react'
 import axios from '../../axios'
+
 import './Body.css'
+import 'swiper/css';
+
 import { Navigation, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+
 import { BsChevronRight } from "react-icons/bs";
 import { BsChevronLeft } from "react-icons/bs";
 
@@ -22,7 +25,7 @@ function Body() {
 
   return (
 
-      <div className="slider__container">
+      <section className="slider">
         <Swiper
         style={{marginTop: 30}}
         modules={[Navigation, Autoplay]}
@@ -30,8 +33,8 @@ function Body() {
         slidesPerView={1}
         centeredSlides={true}
         navigation={{
-          nextEl: ".next__button",
-          prevEl: ".previous__button"
+          nextEl: ".slider__right",
+          prevEl: ".slider__left"
         }}
         autoplay={{
           delay: 3000,
@@ -41,13 +44,13 @@ function Body() {
     >
       {models.map((item) => {
         return (
-            <SwiperSlide key={item.id}><img className='slider__image' src={item.image} alt="" /></SwiperSlide>
+            <SwiperSlide key={item.id}><img src={item.image} alt="" /></SwiperSlide>
         )
         })}
     </Swiper>
-    <BsChevronLeft className='previous__button'></BsChevronLeft>
-    <BsChevronRight className='next__button'></BsChevronRight>
-    </div>
+    <BsChevronLeft className='slider__left'></BsChevronLeft>
+    <BsChevronRight className='slider__right'></BsChevronRight>
+    </section>
     
   )
 
