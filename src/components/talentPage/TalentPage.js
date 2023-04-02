@@ -1,22 +1,17 @@
 import React from 'react'
-import './TalentPage.css'
-import {   useNavigate,useOutletContext } from "react-router-dom";
 import axios from '../../axios'
+
+import './TalentPage.css'
+
 import { useParams } from "react-router-dom";
-import { Navigation, Autoplay } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import { BsChevronRight } from "react-icons/bs";
-import { BsChevronLeft } from "react-icons/bs";
+
 import FemalePage from '../femalePage/FemalePage';
 import MalePage from '../malePage/MalePage';
 
 function TalentPage() {
 
   const [ model, setModel ] = React.useState({})
-  const [ talentId, setTalentId ] = useOutletContext();
   const routeParams = useParams();
-  const navigate = useNavigate()
 
   React.useEffect(() => {
     async function fetchData() {
