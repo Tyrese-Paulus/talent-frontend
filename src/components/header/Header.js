@@ -6,27 +6,29 @@ import { AiFillFacebook } from "react-icons/ai"
 import { Link } from "react-router-dom"
 
 function header() {
+
   return (
     <Link to={`/`}>
     <header className="navbar">
         <div className="nav__logo">
-          <img src="https://www.syncmodels.com/assets/images/205/205-logo.svg" alt="" />
+          <img className="nav__image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/D.E.M.O._Logo_2006.svg/800px-D.E.M.O._Logo_2006.svg.png?20221004001533" alt="" />
         </div>
 
         <ul className="nested-dropdowns">    
             <li>
+
               <div className="nested-dropdowns__item">
                   JOHANNESBURG
               </div>
+
                 <ul>
                   <li>
                     <div className="nested-dropdowns__item">
                       MEN
                     </div>
                     <ul>
-                      <li><Link to={`talents`}>MAINBOARD</Link></li>
-                      <li><a href="">NEW FACES</a></li>
-                      <li><a href="">COMMERCIAL</a></li>
+                      <li><Link to={`talents/johannesburg/male/demo`} >DEMO</Link></li>
+                      <li><Link to={`talents/johannesburg/male/commercial`} >COMMERCIAL</Link></li>
                     </ul>
                   </li>
 
@@ -35,22 +37,11 @@ function header() {
                       WOMAN
                     </div>
                     <ul>
-                      <li><a href="">MAINBOARD</a></li>
-                      <li><a href="">NEW FACES</a></li>
-                      <li><a href="">COMMERCIAL</a></li>
+                      <li><Link to={`talents/johannesburg/female/demo`} >DEMO</Link></li>
+                      <li><Link to={`talents/johannesburg/female/commercial`} >COMMERCIAL</Link></li>
                     </ul>
                   </li>
 
-                  <li>
-                    <div className="nested-dropdowns__item">
-                      INFLUENCERS
-                    </div>
-                    <ul>
-                      <li><a href="">MAINBOARD</a></li>
-                      <li><a href="">NEW FACES</a></li>
-                      <li><a href="">COMMERCIAL</a></li>
-                    </ul>
-                  </li>
                 </ul>
             </li>
 
@@ -64,9 +55,8 @@ function header() {
                       MEN
                     </div>
                     <ul>
-                      <li><a href="">MAINBOARD</a></li>
-                      <li><a href="">NEW FACES</a></li>
-                      <li><a href="">COMMERCIAL</a></li>
+                      <li><Link to={`talents/cape-town/male/demo`} >DEMO</Link></li>
+                      <li><Link to={`talents/cape-town/male/commercial`} >COMMERCIAL</Link></li>
                     </ul>
                   </li>
 
@@ -75,72 +65,18 @@ function header() {
                       WOMAN
                     </div>
                     <ul>
-                      <li><a href="">MAINBOARD</a></li>
-                      <li><a href="">NEW FACES</a></li>
-                      <li><a href="">COMMERCIAL</a></li>
+                      <li><Link to={`talents/cape-town/female/demo`} >DEMO</Link></li>
+                      <li><Link to={`talents/cape-town/female/commercial`} >COMMERCIAL</Link></li>
                     </ul>
                   </li>
 
-                  <li>
-                    <div className="nested-dropdowns__item">
-                      INFLUENCERS
-                    </div>
-                    <ul>
-                      <li><a href="">MAINBOARD</a></li>
-                      <li><a href="">NEW FACES</a></li>
-                      <li><a href="">COMMERCIAL</a></li>
-                    </ul>
-                  </li>
                 </ul>
             </li>
 
-            <li className="dropdowns">SYNCED PRIME</li>
 
-            <li>
-              <div className="nested-dropdowns__item">
-                  INTERNATIONAL
-              </div>
-                <ul>
-                  <li>
-                    <div className="nested-dropdowns__item">
-                      MEN
-                    </div>
-                    <ul>
-                      <li><a href="">MAINBOARD</a></li>
-                      <li><a href="">NEW FACES</a></li>
-                      <li><a href="">COMMERCIAL</a></li>
-                    </ul>
-                  </li>
+            <li className="dropdowns"><Link to={"about"}>ABOUT</Link></li>
+            <li className="dropdowns"><Link to={"contact"}>CONTACT</Link></li>
 
-                  <li>
-                    <div className="nested-dropdowns__item">
-                      WOMAN
-                    </div>
-                    <ul>
-                      <li><a href="">MAINBOARD</a></li>
-                      <li><a href="">NEW FACES</a></li>
-                      <li><a href="">COMMERCIAL</a></li>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <div className="nested-dropdowns__item">
-                      INFLUENCERS
-                    </div>
-                    <ul>
-                      <li><a href="">MAINBOARD</a></li>
-                      <li><a href="">NEW FACES</a></li>
-                      <li><a href="">COMMERCIAL</a></li>
-                    </ul>
-                  </li>
-                </ul>
-            </li>
-
-            <li className="dropdowns">SEARCH</li>
-            <li className="dropdowns">SYNCED FAVORITES</li>
-            <li className="dropdowns">APPLY</li>
-            <li className="dropdowns">ABOUT</li>
-            <li className="dropdowns">CONTACT</li>
             <AiFillInstagram className="navbar__socials" size={35}/>
             <AiFillTwitterSquare className="navbar__socials" size={35}/>
             <AiFillFacebook className="navbar__socials" size={35}/>

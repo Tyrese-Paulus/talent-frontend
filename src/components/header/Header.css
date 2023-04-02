@@ -4,6 +4,11 @@
     margin-top: 16px;
 }
 
+.nav__image{
+  height: 100px;
+  width: 250px;
+}
+
 .navbar{
     margin-top: 12px;
 }
