@@ -23,7 +23,7 @@ function TalentGrid() {
       }
       fetchData()
       
-  })
+  },[])
 
   return (
     <section className="talentGrid">

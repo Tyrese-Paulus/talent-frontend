@@ -20,7 +20,7 @@ function TalentPage() {
       console.log(model.gender);
       }
       fetchData()
-  })
+  },[])
 
   switch (model.gender === "Female") {
     case true:
