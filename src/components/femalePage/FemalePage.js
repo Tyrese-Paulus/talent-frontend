@@ -57,6 +57,11 @@ function FemalePage({model}) {
             </p>
 
             <p>
+            <span>Dress </span>
+            <span> {model.dress} UK</span>
+            </p>
+
+            <p>
             <span>Hair </span>
             <span> {model.hair}</span>
             </p>

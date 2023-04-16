@@ -35,7 +35,8 @@ function TalentPage() {
         shoe:model.shoe,
         hair:model.hair,
         eyes:model.eyes,            
-        image:model.image,      
+        image:model.image,
+        dress:model.dress,      
       }}
       /> )
     case false:

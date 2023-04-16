@@ -6,24 +6,26 @@ import './TalentGrid.css'
 import { useOutletContext } from "react-router-dom";
 import { Link } from "react-router-dom"
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function TalentGrid() {
   const [ models, setModels ] = React.useState([])
   const [ talentId, setTalentId ] = useOutletContext();
   const routeParams = useParams();
+  const navigate = useNavigate()
 
 
   React.useEffect(() => {
 
     async function fetchData() {
-      const request = await axios.get(`talents`);
+      const request = await axios.get(`talents/${routeParams.location}/${routeParams.gender}/${routeParams.organisation}`);
       setModels(request.data);
       console.log(models);
       }
       fetchData()
       
-  },[])
+  },[,navigate])
 
   return (
     <section className="talentGrid">
@@ -45,4 +47,3 @@ function TalentGrid() {
 
 export default TalentGrid
 
-// const request = await axios.get(`talents/${routeParams.location}/${routeParams.gender}/${routeParams.organisation}`);
